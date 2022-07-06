@@ -27,53 +27,52 @@ window.addEventListener('scroll',() => {
 
 
 // 메인비주얼 슬라이드
-new Swiper(".visual .mySwiper", { 
-  // autoplay : {
-  //   delay:2000
-  // },
-  // loop : true,
-  effect: "fade",
+new Swiper ('.visual .mySwiper', {
   navigation: {
-    nextEl: ".visual .swiper-button-next",
-    prevEl: ".visual .swiper-button-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  pagination: {
+    pagination: {
     el: ".visual .swiper-pagination",
     clickable: true,
   },
-});
+  loop :true,
+  effect: 'fade',
+})
+
 
 //STORY 슬라이드
 new Swiper(".story .mySwiper", {
   slidesPerView: "auto",
   spaceBetween: 30,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".story .swiper-button-next",
+    prevEl: ".story .swiper-button-prev",
   },
-  // loop:true
+  loop:true
 });
 
 new Swiper(".story .fadeSwiper", {
   effect: "fade",
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".story .swiper-button-next",
+    prevEl: ".story .swiper-button-prev",
   },
-  // loop:true 
+  loop:true 
 });
 
 
+//CARD 슬라이드
 new Swiper(".card .mySwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".card .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".card .swiper-button-next",
+    prevEl: ".card .swiper-button-prev",
   }
 });
 

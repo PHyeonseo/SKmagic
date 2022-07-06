@@ -190,7 +190,9 @@ header .inner .search.focused .material-icons {
 /********** VISUAL **********/
 .visual {
   position: relative;
-  margin-top: 120px;
+  width: 100%;
+  /* width: 1920px; */
+  margin: 120px auto 0 auto;
 }
 .visual .mySwiper .swiper-pagination {
   width: 700px;
@@ -204,7 +206,7 @@ header .inner .search.focused .material-icons {
 }
 .visual .swiper-button-prev, 
 .visual .swiper-button-next {
-  color: black;
+  color: black; 
 }
 .visual .swiper-button-prev {
   position: absolute;
@@ -827,7 +829,18 @@ header .inner .search.focused .material-icons {
 .footer .inner .right select {
   width: 100%;
   height: 50px;
+  color: #fff;
+  background: #444;
+  padding: 0 40px;
+  box-sizing: border-box;
   border-radius: 25px;
+  appearance: none; 
+  outline: none;
+  border: none;
+}
+.footer .inner .right select option {
+  width: 100%;
+  background: #444;
 }
 .footer .inner .right p:nth-child(2) {
   color: #fff;
