@@ -6,17 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SK매직몰</title>
   <!-- 폰트 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <!-- SWIPER -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- icon -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link rel="stylesheet" href="./css/main.css">
-  <script defer src="./js/jquery-3.6.0.min.js"></script>
   <!-- SWIPER -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!--SCROLL MAGIC-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <!-- gsap,scrollTo -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
 <body>
@@ -109,43 +112,36 @@
               <div class="gnb_ctr">
                 <div class="inner gnb_sub sub02">
                   <div class="product">
-                    <h3>정수기</h3>
+                    <h3>M스토어</h3>
                     <ul class="cate_list">
-                      <li><a href="#!">렌탈 정수기</a></li>
-                      <li><a href="#!">일시불케어 정수기</a></li>
-                      <li><a href="#!">필터구독 정수기</a></li>
-                    </ul>
-                  </div>
-                  <div class="product">
-                    <h3>주방가전</h3>
-                    <ul class="cate_list">
-                      <li><a href="#!">식기세척기</a></li>
-                      <li><a href="#!">인덕션</a></li>
-                      <li><a href="#!">가스레인지</a></li>
-                      <li><a href="#!">전자레인지</a></li>
-                      <li><a href="#!">오븐</a></li>
-                    </ul>
-                  </div>
-                  <div class="product">
-                    <h3>건강가전</h3>
-                    <ul class="cate_list">
-                      <li><a href="#!">렌탈 정수기</a></li>
-                      <li><a href="#!">일시불케어 정수기</a></li>
-                      <li><a href="#!">필터구독 정수기</a></li>
-                    </ul>
-                  </div>
-                  <div class="product">
-                    <h3>생활가전</h3>
-                    <ul class="cate_list">
-                      <li><a href="#!">렌탈 정수기</a></li>
-                      <li><a href="#!">일시불케어 정수기</a></li>
-                      <li><a href="#!">필터구독 정수기</a></li>
+                      <li><a href="#!">소형가전</a></li>
+                      <li><a href="#!">생활용품</a></li>
+                      <li><a href="#!">커피원두</a></li>
+                      <li><a href="#!">밀키트</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </li>
-            <li><a href="#!">브랜드스토리</a></li>
+            <li>
+              <a href="#!">브랜드스토리</a>
+              <div class="gnb_ctr">
+                <div class="inner gnb_sub sub03">
+                  <div class="product">
+                    <h3>스토리</h3>
+                  </div>
+                  <div class="product">
+                    <h3>베스트리뷰</h3>
+                  </div>
+                  <div class="product">
+                    <h3>프리미엄관</h3>
+                  </div>
+                  <div class="product">
+                    <h3>매직라이브쇼</h3>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li><a href="#!">이벤트</a></li>
             <li><a href="#!">다이렉트렌탈</a></li>
             <li><a href="#!">정기구독관</a></li>
@@ -202,7 +198,7 @@
       </div>
       
       <div class="rec_img_box">
-        <div class="rec01">
+        <div class="rec01 rec delay01">
           <a href="#!"><img src="./images/recomend_bg10.jpg" alt=""></a>
           <div class="txt_box">
             <a href="#!">
@@ -212,7 +208,7 @@
             </a>
           </div>
         </div>
-        <div class="rec02">
+        <div class="rec02 rec delay02">
           <img src="./images/recomend_bg11.jpg" alt="">
           <div class="txt_box">
             <a href="#!">
@@ -222,7 +218,7 @@
             </a>
           </div>
         </div>
-        <div class="rec03">
+        <div class="rec03 rec delay03">
           <img src="./images/recomend_bg12.jpg" alt="">
           <div class="txt_box">
             <a href="#!">
@@ -255,49 +251,176 @@
         <p class="more"><a href="#!">전체보기 ></a></p>
       </div>
 
-      <div class="life_product">
+      <div class="life_product sk_magic_pro">
         <div class="left">
-          <div class="life_pro01"><img src="./images/recom01.jpg" alt=""></div>
+          <div class="life_pro01 pro01"><img src="./images/recom01.jpg" alt=""></div>
           <div class="txt">
             <p class="title">설거지 걱정없는 식기세척기</p>
             <p class="sub">국내 최다 쿼드웨이브 세척</p>
           </div>  
         </div>
         <div class="right">
-          <div class="life_pro_box01 life_pro">
-            <div class="life_pro02"><img src="./images/recom02.jpg" alt=""></div>
+          <div class="pro_box01 life_pro">
+            <div class="life_pro02 pro02"><img src="./images/recom02.jpg" alt=""></div>
             <div class="txt">
               <p class="title">화장실에서도 안심하고 구독</p>
-              <p class="sub">국내 최다 쿼드웨이브 세척</p>
+              <p class="sub">올클린 버블 살균, IPX 6등급 방수</p>
             </div>  
           </div>  
-          <div class="life_pro_box02 life_pro">
-            <div class="life_pro03"><img src="./images/recom03.jpg" alt=""></div>
+          <div class="pro_box02 life_pro">
+            <div class="life_pro03 pro03"><img src="./images/recom03.jpg" alt=""></div>
             <div class="txt">
               <p class="title">더욱 건강해지는생활</p>
-              <p class="sub">국내 최다 쿼드웨이브 세척</p>
+              <p class="sub">패브릭 소파형, 4D 마사지 코스</p>
             </div>  
           </div>  
-          <div class="life_pro_box03 life_pro">
-            <div class="life_pro04"><img src="./images/recom04.jpg" alt=""></div>
+          <div class="pro_box03 life_pro">
+            <div class="life_pro04 pro04"><img src="./images/recom04.jpg" alt=""></div>
             <div class="txt">
-              <p class="title">화장실에서도 안심하고 구독</p>
-              <p class="sub">국내 최다 쿼드웨이브 세척</p>
+              <p class="title">한꺼번에 많은 요리도 빠르게</p>
+              <p class="sub">최대화력 6,600W 4구 인덕션</p>
             </div>  
           </div>  
-          <div class="life_pro_box04 life_pro">
-            <div class="life_pro05"><img src="./images/recom05.jpg" alt=""></div>
+          <div class="pro_box04 life_pro">
+            <div class="life_pro05 pro05"><img src="./images/recom05.jpg" alt=""></div>
             <div class="txt">
-              <p class="title">더욱 건강해지는생활</p>
-              <p class="sub">국내 최다 쿼드웨이브 세척</p>
+              <p class="title">다양한 요리 세계의 경험</p>
+              <p class="sub">고온스팀, 광파로 자동 요리</p>
             </div>  
           </div>  
 
         </div>
       </div><!--life_product-->
 
+      <div class="water_product sk_magic_pro">
+        <div class="left">
+          <div class="life_pro01 pro01"><img src="./images/water_pro01.jpg" alt=""></div>
+          <div class="txt">
+            <p class="title">베스트셀러 직수 얼음정수기</p>
+            <p class="sub">ALL직수, UV안심케어로 깨끗한 얼음</p>
+          </div>  
+        </div>
+        <div class="right">
+          <div class="pro_box01 life_pro">
+            <div class="life_pro02 pro02"><img src="./images/water_pro02.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">설계부터 다른 대용량 정수기</p>
+              <p class="sub">국내 최대 용량 직수 얼음</p>
+            </div>  
+          </div>  
+          <div class="pro_box02 life_pro">
+            <div class="life_pro03 pro03"><img src="./images/water_pro03.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">얼음으로 쿨앤리치 정수기</p>
+              <p class="sub">국내 최소 사이즈 컴팩트 얼음 정수기</p>
+            </div>  
+          </div>  
+          <div class="pro_box03 life_pro">
+            <div class="life_pro04 pro04"><img src="./images/water_pro04.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">직수정수기 스테디셀러</p>
+              <p class="sub">ALL직수, UV안심케어 올인원 정수기</p>
+            </div>  
+          </div>  
+          <div class="pro_box04 life_pro">
+            <div class="life_pro05 pro05"><img src="./images/water_pro05.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">필요한 만큼 직수로 깨끗하게</p>
+              <p class="sub">직수는 그대로 크기는 더 작게</p>
+            </div>  
+          </div>  
+
+        </div>
+      </div><!--water-->
+
+      <div class="dish_washer_product sk_magic_pro">
+        <div class="left">
+          <div class="life_pro01 pro01"><img src="./images/dish_washer_pro01.jpg" alt=""></div>
+          <div class="txt">
+            <p class="title">새로운 식기 관리의 시작</p>
+            <p class="sub">와이드 무빙세척, 세계최초 자동 문 닫힘</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="pro_box01 life_pro">
+            <div class="life_pro02 pro02"><img src="./images/dish_washer_pro02.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">대용량으로 편리한 트리플 케어</p>
+              <p class="sub">8가지 색상 , 독보적 기능 총집합</p>
+            </div>
+          </div>
+          <div class="pro_box02 life_pro">
+            <div class="life_pro03 pro03"><img src="./images/dish_washer_pro03.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">필요한 기능한 트리플 케어</p>
+              <p class="sub">세균, 바이러스 99.9999% 제거</p>
+            </div>
+          </div>
+          <div class="pro_box03 life_pro">
+            <div class="life_pro04 pro04"><img src="./images/dish_washer_pro04.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">환경을 생각하는 식기세척기</p>
+              <p class="sub">12인용으로 더욱 넉넉한 공간</p>
+            </div>
+          </div>
+          <div class="pro_box04 life_pro">
+            <div class="life_pro05 pro05"><img src="./images/dish_washer_pro05.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">SK매직 스테디셀러</p>
+              <p class="sub">자동문열림, 최소 타공으로 설치</p>
+            </div>
+          </div>
+      
+        </div>
+      </div><!--dish_washer-->
+
+      <div class="induction_product sk_magic_pro">
+        <div class="left">
+          <div class="life_pro01 pro01"><img src="./images/induction_pro01.jpg" alt=""></div>
+          <div class="txt">
+            <p class="title">최고화력의 시작 보더리스 인덕션</p>
+            <p class="sub">전체출력 6,600W , 4구 인덕션</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="pro_box01 life_pro">
+            <div class="life_pro02 pro02"><img src="./images/induction_pro02.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">맞춤형 화구로 가장 편리하게</p>
+              <p class="sub">스마트함을 더한 3구 인덕션</p>
+            </div>
+          </div>
+          <div class="pro_box02 life_pro">
+            <div class="life_pro03 pro03"><img src="./images/induction_pro03.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">더블 플렉스 올파워 인덕션</p>
+              <p class="sub">글라스 상판으로 고급스러운 인테리어</p>
+            </div>
+          </div>
+          <div class="pro_box03 life_pro">
+            <div class="life_pro04 pro04"><img src="./images/induction_pro04.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">초고화력 화구에 강력하게 조리</p>
+              <p class="sub">인덕션 2구 + 가스 화구 1구</p>
+            </div>
+          </div>
+          <div class="pro_box04 life_pro">
+            <div class="life_pro05 pro05"><img src="./images/induction_pro05.jpg" alt=""></div>
+            <div class="txt">
+              <p class="title">나혼자 요리, 다이얼 1구 인덕션</p>
+              <p class="sub">바람부는 야외에서도 편리하게</p>
+            </div>
+          </div>
+      
+        </div>
+      </div><!--life_product-->
+
+
+
 
     </div>
+
+
   </section><!--sk_product-->
 
   <section class="story">
@@ -306,34 +429,49 @@
         <div class="left">
           <p>OUR</p>
           <p>STORY</p>
-          <p class="sub01">SK매직에서 건강도 생활구독 할 수 있을까요?</p>
-          <p class="sub02">쓰면 쓸수록 지구까지 깨끗해지는 놀라운 차원의 SK매직의 생활구독을 확인해 보세요.</p>
+          <div class="swiper fadeSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="txt_box">
+                  <p class="sub01">SK매직에서 건강도 생활구독 할 수 있을까요?</p>
+                  <p class="sub02">쓰면 쓸수록 지구까지 깨끗해지는 놀라운 차원의 SK매직의 생활구독을 확인해 보세요.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="txt_box">
+                  <p class="sub01">깔끔 간편한 에코미니 정수기 생생 리얼 후기</p>
+                  <p class="sub02">쉬운 자가관리와 미니멀 디자인의 SK매직 에코미니 정수기 사용 리얼 후기를 확인해 보세요.</p>
+                </div>
+              </div>
+            </div>
+          </div><!--fadeSwiper-->
           <p class="more"><a href="#!">자세히 보기 ></a></p>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
         <div class="right">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="./images/pc_1.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="./images/pc_2.jpg" alt=""></div>
+          <div class="container">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/pc_1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/pc_2.jpg" alt=""></div>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
-
     </div>
   </section><!--story-->
 
 
   <section class="review">
-    <div class="inner">
+    <div class="inner scroll_rec">
       <div class="left">
         <p>Best</p>
         <p>Review</p>
         <p class="sub">SK매직 회원들의 다양한 후기를 만나보세요!</p>
         <p class="more"><a href="#!">전체보기 ></a></p>
 
-        <div class="rev01 rev">
+        <div class="rev01 rev origin delay01">
           <div class="rev_img"><img src="./images/review_1.jpg" alt=""></div>
           <div class="txt">
             <p class="main_txt">딱 제가 바라던 내부까지 물청소 가능한 그런 공기청정기에요~~</p>
@@ -344,7 +482,7 @@
         </div>
       </div>
       <div class="right">
-        <div class="rev02 rev">
+        <div class="rev02 rev origin delay02">
           <div class="rev_img"><img src="./images/review_2.jpg" alt=""></div>
           <div class="txt">
             <p class="main_txt">물끓일 일도 없고, 물통 닦을 일도 없고, 냉장고 여닫는 횟수도 줄었고, 생수 사다놓을 필요도 없구 탁월한 선택이에요!</p>
@@ -353,7 +491,7 @@
             <p class="star"><img src="./images/icon/star_05.png" alt=""></p>
           </div>
         </div>
-        <div class="rev03 rev">
+        <div class="rev03 rev origin delay03">
           <div class="rev_img"><img src="./images/review_3.jpg" alt=""></div>
           <div class="txt">
             <p class="main_txt">이건 14인용으로 곰솥도 잘 세척될 만큼 내부가 큼직하니 좋네요.</p>
@@ -372,6 +510,8 @@
       <div class="txt">
         <p class="title_txt">이달의 카드 혜택</p>
         <p class="sub_txt">SK매직 제휴 신용카드 혜택을 만나보세요.</p>
+        <div class="swiper-button-next"><i class="xi-angle-right"></i></div>
+        <div class="swiper-button-prev"><i class="xi-angle-left"></i></div>
       </div>
       <div class="card_box">
         <div class="swiper mySwiper">
@@ -385,8 +525,6 @@
             <div class="swiper-slide"><img src="./images/PC_card 77.jpg" alt=""></div>
             <div class="swiper-slide"><img src="./images/PC_card 88.jpg" alt=""></div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </div>
@@ -525,6 +663,27 @@
 
     </div>
   </footer><!--footer-->
+
+  <div class="quick_menu">
+    <div class="container">
+
+      <div class="top quick">
+        <img src="./images/icon/icon_quick_top.png" alt="">
+        <p>맨위로</p>
+      </div>
+
+      <div class="chat quick">
+        <img src="./images/icon/icon_quick_tel_request.png" alt="">
+        <p>채팅상담</p>
+      </div>
+
+      <div class="tel quick">
+        <img src="./images/icon/icon_quick_chat_request.png" alt="">
+        <p>전화문의</p>
+      </div>
+      
+    </div>
+  </div><!--quick_menu-->
 
 </body>
 </html>

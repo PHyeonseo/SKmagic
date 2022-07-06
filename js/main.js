@@ -1,10 +1,10 @@
+// 헤더검색버튼
 const search = document.querySelector('.search')
 const searchInput = document.querySelector('.search input')
 
 search.addEventListener('click',function() {
   searchInput.focus()
 })
-
 searchInput.addEventListener('focus',function() {
   search.classList.add('focused')
 })
@@ -12,62 +12,59 @@ searchInput.addEventListener('blur',function() {
   search.classList.remove('focused')
 })
 
-// const gnbLis = document.querySelectorAll('.gnb>ul>li')
-// const gnbFocus1 = document.querySelector('.magicP')
-// // const gnbFocus = document.querySelectorAll('.header>.inner .gnb>ul>li')
-// // console.log(gnbFocus1)
+//추천상품 gsap
+const recPros = document.querySelectorAll('.recommend .inner .rec')
 
-// gnbLis.forEach((gnbLi) => {
-//   gnbLi.addEventListener('mouseenter',function() {
-//     gnbFocus1.style.width = '100px'
-//     console.log(gnbFocus1)
-//   })
-
-// })
-// const gnbLis = document.querySelectorAll('.gnb ul li')
-// const gnbCtr = document.querySelector('.gnb_ctr')
-// const gnbMenus =document.querySelectorAll('.gnb_ctr .gnb_menu')
-// const gnbMenu1 =document.querySelector('.gnb_ctr .gnb_menu')
+window.addEventListener('scroll',() => {
+  recPros.forEach((recPro) => {
+    if(window.scrollY > 300) {
+      gsap.to(recPro,0.1,{
+        opacity : 1
+      })
+    }
+  })
+})
 
 
-// gnbLis[0].addEventListener('mouseover',function() {
-//   gnbMenus[0].style.display = 'flex'
-// })
-
-
+// 메인비주얼 슬라이드
 new Swiper(".visual .mySwiper", { 
-  autoplay : {
-    delay:2000
+  // autoplay : {
+  //   delay:2000
+  // },
+  // loop : true,
+  effect: "fade",
+  navigation: {
+    nextEl: ".visual .swiper-button-next",
+    prevEl: ".visual .swiper-button-prev",
   },
-  loop : true,
+  pagination: {
+    el: ".visual .swiper-pagination",
+    clickable: true,
+  },
+});
+
+//STORY 슬라이드
+new Swiper(".story .mySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // loop:true
+});
+
+new Swiper(".story .fadeSwiper", {
   effect: "fade",
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // loop:true 
 });
 
 
-new Swiper(".story .mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 20,
-  centeredSlides: true,
-  // autoplay : {
-  //   delay:2000
-  // },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // loop : true
-});
-
-
-var swiper = new Swiper(".card .mySwiper", {
+new Swiper(".card .mySwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
   pagination: {
@@ -79,3 +76,41 @@ var swiper = new Swiper(".card .mySwiper", {
     prevEl: ".swiper-button-prev",
   }
 });
+
+
+
+const scrollRecs = document.querySelectorAll('.scroll_rec')
+console.log(scrollRecs)
+
+scrollRecs.forEach((scrollRec) => {
+  new ScrollMagic
+    .Scene({
+      triggerElement: scrollRec,
+      triggerHook: 0.7
+    })
+  .setClassToggle(scrollRec,'show')
+  .addTo(new ScrollMagic.Controller())
+})
+
+
+// 퀵메뉴
+const Stop = document.querySelector('.quick_menu .top')
+
+Stop.addEventListener('click',() => {
+  gsap.to(window, 0.5, { //gsap.to(요소,시간,{애니메이션옵션})
+    scrollTo : 0
+  })
+})
+
+window.addEventListener('scroll',() => {
+  if(window.scrollY > 150) {
+      gsap.to(Stop,0.8, {
+        right : 0
+      })
+  }
+  else if(window.scrollY == 0) {
+    gsap.to(Stop,0.8, {
+      right : -63
+    })
+  }
+})
