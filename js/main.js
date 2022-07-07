@@ -41,6 +41,78 @@ new Swiper ('.visual .mySwiper', {
 })
 
 
+// SKPRODUCT
+const skPros = document.querySelectorAll('.sk_product .inner .sk_pro_box label')
+
+const lifePro = document.querySelector('.life_product .left')
+const waterPro = document.querySelector('.water_product .left')
+const dishWasherPro = document.querySelector('.dish_washer_product .left')
+const inductionPro = document.querySelector('.induction_product .left')
+
+const lifeProR = document.querySelector('.life_product .right')
+const waterProR = document.querySelector('.water_product .right')
+const dishWasherProR = document.querySelector('.dish_washer_product .right')
+const inductionProR = document.querySelector('.induction_product .right')
+
+const skProLs = document.querySelectorAll('.sk_magic_pro .left')
+const skProRs = document.querySelectorAll('.sk_magic_pro .right')
+
+// skPros.forEach((skPro) => {
+//   skPro.addEventListener('click',() => {
+//     skProLs.forEach((skProL)=> {
+//       gsap.to(skProL,0.3,{opacity:1})
+//       gsap.to(skProL,0.3,{opacity:1})
+//     })
+//     skProRs.forEach((skproR) => {
+//       gsap.to(skproR,0.3,{opacity:1})
+//     })
+//   })
+// })
+
+skPros[0].addEventListener('click',() => {
+    gsap.to(lifePro,0.3,{opacity: 1})
+    gsap.to(lifeProR,0.3,{opacity: 1})
+    gsap.to(waterPro,0.3,{opacity: 0})
+    gsap.to(waterProR,0.3,{opacity: 0})
+    gsap.to(dishWasherPro,0.3,{opacity: 0})
+    gsap.to(dishWasherProR,0.3,{opacity: 0})
+    gsap.to(inductionPro,0.3,{opacity: 0})
+    gsap.to(inductionProR,0.3,{opacity: 0})
+})
+skPros[1].addEventListener('click',() => {
+    gsap.to(waterPro,0.3,{opacity: 1})
+    gsap.to(waterProR,0.3,{opacity: 1})
+    gsap.to(lifePro,0.1,{opacity: 0})
+    gsap.to(lifeProR,0.1,{opacity: 0})
+    gsap.to(dishWasherPro,0.3,{opacity: 0})
+    gsap.to(dishWasherProR,0.3,{opacity: 0})
+    gsap.to(inductionPro,0.3,{opacity: 0})
+    gsap.to(inductionProR,0.3,{opacity: 0})
+})
+skPros[2].addEventListener('click',() => {
+    gsap.to(dishWasherPro,0.3,{opacity: 1})
+    gsap.to(dishWasherProR,0.3,{opacity: 1})
+    gsap.to(lifePro,0.1,{opacity: 0})
+    gsap.to(lifeProR,0.1,{opacity: 0})
+    gsap.to(waterPro,0.3,{opacity: 0})
+    gsap.to(inductionPro,0.3,{opacity: 0})
+    gsap.to(inductionProR,0.3,{opacity: 0})
+})
+skPros[3].addEventListener('click',() => {
+    gsap.to(inductionPro,0.3,{opacity: 1})
+    gsap.to(inductionProR,0.3,{opacity: 1})
+    gsap.to(lifePro,0.1,{opacity: 0})
+    gsap.to(lifeProR,0.1,{opacity: 0})
+    gsap.to(waterPro,0.3,{opacity: 0})
+    gsap.to(waterProR,0.3,{opacity: 0})
+    gsap.to(dishWasherPro,0.3,{opacity: 0})
+    gsap.to(dishWasherProR,0.3,{opacity: 0})
+})
+
+
+
+
+
 //STORY 슬라이드
 new Swiper(".story .mySwiper", {
   slidesPerView: "auto",

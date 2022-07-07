@@ -291,10 +291,20 @@ header .inner .search.focused .material-icons {
   color: #fff;
   background: #F47726;
 }
-#life:checked ~ .life_product {display: flex;}
+#life:checked ~ .life_product {display: flex;} 
 #water:checked ~.water_product {display: flex;}
 #dish_washer:checked ~.dish_washer_product {display: flex;}
 #induction:checked ~.induction_product {display: flex;}
+
+
+.sk_product .inner .sk_magic_pro .left {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.sk_product .inner .sk_magic_pro .right {
+  opacity: 1;
+  transition: all 1.7s;
+}
 
 .sk_product {
   margin-top: 100px;
@@ -354,6 +364,7 @@ header .inner .search.focused .material-icons {
 .sk_product .inner .sk_magic_pro .left .pro01 {
   width: 520px;
   height: 520px;
+  transition: all 1s;
 }
 .sk_product .inner .sk_magic_pro .left .pro01 img {
   width: 100%;
@@ -451,10 +462,10 @@ header .inner .search.focused .material-icons {
 }
 .story .inner .story_box .left .fadeSwiper .swiper-slide .txt_box .sub01 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .story .inner .story_box .left .fadeSwiper .swiper-slide .txt_box .sub02 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 300;
   margin: 25px 0;
 }
