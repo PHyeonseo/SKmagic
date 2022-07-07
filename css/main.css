@@ -297,14 +297,11 @@ header .inner .search.focused .material-icons {
 #induction:checked ~.induction_product {display: flex;}
 
 
-.sk_product .inner .sk_magic_pro .left {
+.sk_product .inner .sk_magic_pro  {
   opacity: 1;
   transition: all 0.3s;
 }
-.sk_product .inner .sk_magic_pro .right {
-  opacity: 1;
-  transition: all 1.7s;
-}
+
 
 .sk_product {
   margin-top: 100px;
@@ -341,6 +338,7 @@ header .inner .search.focused .material-icons {
 }
 .sk_product .inner .sk_pro_box .label_box .induction {
   width: 81px;
+  transition: all 2s;
 }
 .sk_product .inner .sk_pro_box .more {
   padding-top: 22px;
@@ -688,13 +686,22 @@ header .inner .search.focused .material-icons {
   margin-bottom: 30px;
 }
 .help .inner .help_box {
-  display: flex;
+  display: flex;  
 }
 .help .inner .help_box .hel {
   margin-right: 20px;
+  width: 165px;
+  height: 165px;
+  border-radius: 20px;
 }
 .help .inner .help_box .hel:last-child {
   margin: 0;
+}
+.help .inner .hel {
+  transition: all 0.4s;
+}
+.help .inner .hel:hover {
+  box-shadow: 10px 10px 10px 0 rgb(0 0 0 /20%);
 }
 
 /********** NOTICE **********/  
